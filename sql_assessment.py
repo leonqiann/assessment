@@ -60,6 +60,10 @@ while menu_choice != 'Z':
         print_query('top 3 apg')
     elif menu_choice == 'D':
         print_query('not usa players')
+    elif menu_choice == 'E':
+        jersey_num = int(input('Enter a jersey number to see which player has that specific jersey number: '))
+        print_parameter_query("first_name, last_name, position, age, height, weight, ppg, rpg, apg, jersey_num, country", "jersey_num = ? ORDER BY ppg DESC",jersey_num)
+
     elif menu_choice == 'H':
         position = input('Which position do you want to see: ')
         print_parameter_query("first_name, last_name, position, age, height, weight, ppg, rpg, apg, jersey_num, country", "position = ? ORDER BY ppg DESC",position)
