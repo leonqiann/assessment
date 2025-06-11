@@ -39,7 +39,7 @@ def print_parameter_query(fields:str, where:str, parameter):
 
 menu_choice = ''
 while menu_choice != 'Z':
-    menu_choice = input('Welcome to the cars database\n\n'
+    menu_choice = input('Welcome to the Chicago Bulls database\n\n'
                         'Type the letter for the information you want\n'
                         "A: Top 3 scorers\n"
                         "B: Top 3 rebounders\n"
@@ -49,6 +49,7 @@ while menu_choice != 'Z':
                         'F: Shortest player\n'
                         'G: Tallest player\n'
                         'H: Info about a player with a specific position\n'
+                        'I: All info about a specific player\n'
                         'Z: Exit\n\n'
                         'Type option here: ')
     menu_choice = menu_choice.upper()
@@ -71,3 +72,7 @@ while menu_choice != 'Z':
         position = input('Which position do you want to see: ')
         position_title = position.title()
         print_parameter_query("first_name, last_name, position, age, height, weight, ppg, rpg, apg, jersey_num, country", "position = ? ORDER BY ppg DESC",position_title)
+    elif menu_choice == 'I':
+        first_name = input('Which player do you want to see: ')
+        first_name_title = first_name.title()
+        print_parameter_query("first_name, last_name, position, age, height, weight, ppg, rpg, apg, jersey_num, country", "first_name = ? ORDER BY ppg DESC",first_name_title)
