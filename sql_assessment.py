@@ -69,4 +69,5 @@ while menu_choice != 'Z':
         print_query('tallest')
     elif menu_choice == 'H':
         position = input('Which position do you want to see: ')
-        print_parameter_query("first_name, last_name, position, age, height, weight, ppg, rpg, apg, jersey_num, country", "position = ? ORDER BY ppg DESC",position)
+        position_title = position.title()
+        print_parameter_query("first_name, last_name, position, age, height, weight, ppg, rpg, apg, jersey_num, country", "position = ? ORDER BY ppg DESC",position_title)
