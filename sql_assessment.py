@@ -43,7 +43,7 @@ while menu_choice != 'Z':
                         'Type the letter for the information you want\n'
                         "A: Top 3 scorers\n"
                         "B: Top 3 rebounders\n"
-                        'C: top 3 assisters\n'
+                        'C: Top 3 assisters\n'
                         "D: Info for player who aren't from the USA \n"
                         'E: Info about a player with a specific jersey number\n'
                         'F: Shortest player\n'
@@ -62,7 +62,7 @@ while menu_choice != 'Z':
     elif menu_choice == 'D':
         print_query('not usa players')
     elif menu_choice == 'E':
-        jersey_num = int(input('Enter a jersey number to see which player has that specific jersey number: '))
+        jersey_num = int(input('Enter a jersey number from 0 - 44 to see which player has that specific jersey number (If nothing shows up, that means no player has that jersey number.) : '))
         print_parameter_query("first_name, last_name, position, age, height, weight, ppg, rpg, apg, jersey_num, country", "jersey_num = ? ORDER BY ppg DESC",jersey_num)
     elif menu_choice == 'F':
         print_query('shortest')
