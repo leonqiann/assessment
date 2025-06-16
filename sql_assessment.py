@@ -74,5 +74,6 @@ while menu_choice != 'Z':
         print_parameter_query("first_name, last_name, position, age, height, weight, ppg, rpg, apg, jersey_num, country", "position = ? ORDER BY ppg DESC",position_title)
     elif menu_choice == 'I':
         first_name = input('Which player do you want to see: ')
+        #makes the parameter query accept uncapitalized inputs 
         first_name_title = first_name.title()
         print_parameter_query("first_name, last_name, position, age, height, weight, ppg, rpg, apg, jersey_num, country", "first_name = ? ORDER BY ppg DESC",first_name_title)
